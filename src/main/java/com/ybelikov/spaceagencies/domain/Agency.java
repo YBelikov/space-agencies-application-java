@@ -1,16 +1,20 @@
 package com.ybelikov.spaceagencies.domain;
 import  java.util.Date;
+import java.util.Set;
 import javax.persistence.*;
 
 @Entity
+
 public class Agency {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
     private String name;
     private Date establishmentDate;
+
     @OneToMany(mappedBy = "agency")
-    private Set<Programs> programs;
+    private Set<Program> programs;
+
     public Agency() {}
 
 
