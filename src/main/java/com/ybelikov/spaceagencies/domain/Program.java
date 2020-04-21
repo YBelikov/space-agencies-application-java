@@ -8,7 +8,8 @@ import java.util.Set;
 @Entity
 public class Program {
     @Id
-    private int Id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String name;
     private String target;
     private Date startDate;
@@ -18,6 +19,14 @@ public class Program {
 
     @OneToMany(mappedBy = "program")
     private Set<Mission> missions;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public Set<Mission> getMissions() {
         return missions;

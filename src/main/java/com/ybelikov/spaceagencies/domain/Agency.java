@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Agency {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int Id;
+    private long id;
     private String name;
     private Date establishmentDate;
 
@@ -18,12 +18,12 @@ public class Agency {
     public Agency() {}
 
 
-    public int getId() {
-        return Id;
+    public long getId() {
+        return id;
     }
 
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -42,5 +42,11 @@ public class Agency {
         this.establishmentDate = establishmentDate;
     }
 
+    public Set<Program> getPrograms() {
+        return programs;
+    }
 
+    public void setPrograms(Set<Program> programs) {
+        this.programs = programs;
+    }
 }
