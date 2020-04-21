@@ -4,15 +4,13 @@ import javax.persistence.*;
 
 @Entity
 
-public class Agencies_Programs {
+public class Administrator {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    private String name;
+    private String surname;
 
-    @ManyToOne
+    @OneToOne
     private Agency agency;
-
-    @ManyToOne
-    private Program program;
-
 }

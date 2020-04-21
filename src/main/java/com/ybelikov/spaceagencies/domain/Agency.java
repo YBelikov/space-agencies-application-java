@@ -14,6 +14,8 @@ public class Agency {
 
     @OneToMany(mappedBy = "agency")
     private Set<Agencies_Programs> agencies_programs;
+    @OneToOne
+    private Administrator administrator;
 
     public Agency() {}
 
@@ -42,11 +44,11 @@ public class Agency {
         this.establishmentDate = establishmentDate;
     }
 
-    public Set<Program> getPrograms() {
-        return programs;
+    public Set<Agencies_Programs> getAgencies_programs() {
+        return agencies_programs;
     }
 
-    public void setPrograms(Set<Program> programs) {
-        this.programs = programs;
+    public void setAgencies_programs(Set<Agencies_Programs> agencies_programs) {
+        this.agencies_programs = agencies_programs;
     }
 }
