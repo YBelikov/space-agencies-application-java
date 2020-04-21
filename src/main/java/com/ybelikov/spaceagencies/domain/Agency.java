@@ -13,7 +13,7 @@ public class Agency {
     private Date establishmentDate;
 
     @OneToMany(mappedBy = "agency")
-    private Set<Program> programs;
+    private Set<Agencies_Programs> agencies_programs;
 
     public Agency() {}
 

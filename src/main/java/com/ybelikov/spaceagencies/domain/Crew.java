@@ -9,7 +9,7 @@ public class Crew {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private int numberOfMembers;
-    @OneToMany
+    @OneToMany(mappedBy = "crew")
     private Set<Astronaut> astronauts;
     @OneToOne
     private Mission mission;

@@ -10,7 +10,12 @@ public class Astronaut {
     private long id;
     private String name;
     private  String surname;
-    
+    private Date birthDate;
+    private String rank;
+
+    @ManyToOne
+    private Crew crew;
+
     @ManyToOne
     private Country country;
     public long getId() {
@@ -61,10 +66,11 @@ public class Astronaut {
         this.country = country;
     }
 
-    private Date birthDate;
-    private String rank;
+    public Crew getCrew() {
+        return crew;
+    }
 
-
-
-
+    public void setCrew(Crew crew) {
+        this.crew = crew;
+    }
 }
