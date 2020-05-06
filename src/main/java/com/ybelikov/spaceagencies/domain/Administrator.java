@@ -1,8 +1,5 @@
 package com.ybelikov.spaceagencies.domain;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
-
 import javax.persistence.*;
 import java.util.Date;
 
