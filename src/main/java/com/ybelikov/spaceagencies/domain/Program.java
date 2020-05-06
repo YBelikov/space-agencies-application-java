@@ -14,8 +14,8 @@ public class Program {
     private String target;
     private Date startDate;
 
-    @OneToMany(mappedBy = "program")
-    private Set<Agencies_Programs> agencies_programs;
+    @ManyToMany
+    private Set<Agency> agencies;
 
     @OneToMany(mappedBy = "program")
     private Set<Mission> missions;
@@ -52,12 +52,12 @@ public class Program {
         this.target = target;
     }
 
-    public Set<Agencies_Programs> getAgencies_programs() {
-        return agencies_programs;
+    public Set<Agency> getAgencies_programs() {
+        return agencies;
     }
 
-    public void setAgencies_programs(Set<Agencies_Programs> agencies_programs) {
-        this.agencies_programs = agencies_programs;
+    public void setAgencies_programs(Set<Agency> agencies) {
+        this.agencies = agencies;
     }
 
     public Date getStartDate() {
