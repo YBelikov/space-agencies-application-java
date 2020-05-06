@@ -44,11 +44,11 @@ public class Agency {
         this.establishmentDate = establishmentDate;
     }
 
-    public Set<Program> getAgencies_programs() {
+    public Set<Program> getPrograms() {
         return programs;
     }
 
-    public void setAgencies_programs(Set<Program> programs) {
+    public void setPrograms(Set<Program> programs) {
         this.programs = programs;
     }
 }
